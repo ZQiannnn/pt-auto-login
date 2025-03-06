@@ -108,7 +108,7 @@ if __name__ == "__main__":
     headless = args.headless if args.headless is not None else (os.getenv('HEADLESS', 'True').lower() in ['true', '1', 't'])
 
     # init driver
-    driver = DriverUtils.get_driver(headless=headless)
+    driver = DriverUtils.get_driver()
     driver.implicitly_wait(10)
 
     # login
