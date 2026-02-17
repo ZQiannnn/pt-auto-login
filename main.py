@@ -60,7 +60,7 @@ def login(driver):
     else:
         # 4.1 input otp code
         logging.info("verifing otp...")
-        otp_code_input= driver.find_element(By.ID, "otpCode")
+        otp_code_input= driver.find_element(By.ID, "otp-code")
         totp = pyotp.TOTP(totp_sec)
         totp_code = totp.now()
         otp_code_input.send_keys(totp_code)
